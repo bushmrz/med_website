@@ -116,7 +116,7 @@ body {
     height: 698px;
 }
 .main-block__title {
-    font-size: 96px;
+    font-size: 76px;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
 }
@@ -128,7 +128,7 @@ body {
 .main-block__text {
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
-    padding: 70px 0px  0px 0px; /* Сверху справа снизу слева */
+    padding: 35px 0px  0px 0px; /* Сверху справа снизу слева */
     font-weight: 400;
 }
 .main-block__image{
@@ -156,7 +156,7 @@ body {
     background-color: #daebea ;
     justify-content: center;
     transition: background-color 0.3s ease 0s;
-    margin: 46px auto 0 0;
+    margin: 25px auto 0 0;
 }
 .button:hover{
     background-color: #daebeaa8;
@@ -196,7 +196,7 @@ body {
     width: 535px;
     font-weight: 700;
     margin: 80px auto 0;
-    font-style: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif;
     line-height: 1.1;
     color: #a8cecc;
     text-align: center;
@@ -206,7 +206,7 @@ body {
     width: 852px;
     font-style: normal;
     margin: 20px auto 0;
-    font-style: 'Open-Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #808080;
     text-align: center;
     
@@ -243,7 +243,7 @@ body {
 }
 .item-service__title-one {
     font-size: 20px;
-    font-style: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #a8cecc;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -252,7 +252,7 @@ body {
 }
 .item-service__text {
     font-size: 16px;
-    font-style: 'Open-Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #111111;
     margin: 20px 1px 0;
     line-height: 1.6;
@@ -312,7 +312,7 @@ body {
     text-align: left;
     color: #111111;
     font-size: 16px;
-    font-style: 'Open-Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
 .button {
@@ -324,7 +324,7 @@ body {
 }
 .lab-tests__cont-four {
     display: flex;
-    border: 15px 15px 15px 15px;
+    border: 15px;
 }
 .lab-tests__cont-three {
     flex: 1 1 100%;
@@ -332,7 +332,7 @@ body {
 }
 .lab-tests__three-title {
     font-size: 20px;
-    font-style: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     line-height: 1.2;
     color: #a8cecc;
@@ -341,7 +341,7 @@ body {
 }
 .lab-tests__text-two {
     font-size: 16px;
-    font-size: 'Open-Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     color: #111111;
     line-height: 1.6;
@@ -537,15 +537,12 @@ body {
     display: flex;
 }
 .our__picture-one {
-    background-position: 50% 50%;
-    max-width: 475px;
-    min-height: 448px;
     flex: 0 0 33.33333333%;
     max-width: 33.33333333%;
     min-width: 33.33333333%;
-    background-image: url("D:/Visual Studia Code/University/img/dentist.jpg");
-    min-height: 448px;
+    background-image: url("//images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/0c9f21e6dba551858e854231/pexels-photo-305567.jpeg");
     background-position: 50% 50%;
+    min-height: 448px;
     object-fit: cover;
     background-size: cover;
     background-repeat: no-repeat;
@@ -573,6 +570,7 @@ body {
 }
 .our__con-text {
     margin: 20px 0 0;
+    color: #ffffff;
     font-family: 'Open-Sans', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -582,12 +580,9 @@ body {
     flex: 0 0 33.33333333%;
     max-width: 33.33333333%;
     min-width: 33.33333333%;
-    background-size: cover;
-    max-width: 475px;
+    background-image: url("//images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/aae3c21e00345142a24500be/pexels-photo-3825502.jpeg");
     background-position: 50% 50%;
-    background-image: url("D:/Visual Studia Code/University/img/proba.jpeg");
     min-height: 448px;
-    background-position: 50% 50%;
     object-fit: cover;
     background-size: cover;
     background-repeat: no-repeat;
@@ -644,8 +639,12 @@ body {
     max-width: 65%;
     min-width: 65%;
     min-height: 607px;
-    background-image:  url("D:/Visual Studia Code/University/img/doctor_hand.jpeg");
+
     background-position: 50% 50%;
+}
+.location__container {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 .location__cont-two {
     padding: 50px 30px 60px;
@@ -674,7 +673,11 @@ body {
     margin: 35px 0 0;
     line-height: 1.6;
 }
-
+h2 {
+    font-size: 35px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 20px;
+}
 /*------------------------------- PAGE CONTACTS -------------------------*/
 .page__contacts {
     color: #ffffff;
@@ -724,7 +727,7 @@ body {
 }
 
 /*------------------------------- ОПТИМИЗАЦИЯ САЙТА -------------------------------*/
-@media (max-widht: 992px) {
+@media(max-width: 992px) {
     .header__menu {
         margin: 0px 0px 0px 508px;
     }
@@ -785,7 +788,7 @@ body {
         display: grid;
     }
 }
-@media (max-widht: 479px) {
+@media(max-width: 479px) {
     .header__container {
         min-height: 55px;
     }
@@ -796,7 +799,7 @@ body {
         font-size: 18px;
     }
 }
-@media (max-widht: 767px) {
+@media (max-width: 767px) {
     .header__menu {
         margin: 0px 0px 0px 408px;
     }
