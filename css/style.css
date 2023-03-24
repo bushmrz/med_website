@@ -145,7 +145,7 @@ body {
 
 /* --------------------- Button -----------------------------*/
 .button{
-    display: inline-block;
+    /*display: inline-block;*/
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -157,6 +157,8 @@ body {
     justify-content: center;
     transition: background-color 0.3s ease 0s;
     margin: 25px auto 0 0;
+    display: flex;
+    max-width: max-content;
 }
 .button:hover{
     background-color: #daebeaa8;
@@ -184,12 +186,16 @@ body {
 /* --------------------- Второй сектор -----------------------------*/
 .page__services {
     color: #111111;
+    flex: 1 1 auto;
 }
 .services__body-column {
     display: flex;
-    margin: 0px -15px;
-    grid-template-columns: repeat(4, calc(25% - 16.5px));
-    grid-gap: 22px;
+    flex-direction: row;
+
+    /*flex-wrap: wrap;*/
+    margin: 0px 15px 0px 15px;
+    /*grid-template-columns: repeat(4, calc(25% - 16.5px));*/
+    grid-gap: 20px;
 }
 .services__body-title-one {
     font-size: 48px;
@@ -212,10 +218,13 @@ body {
     
 }
 .services__column {
-    grid-template-columns: repeat(4, calc(25% - 16.5px));
+    /*grid-template-columns: repeat(4, calc(25% - 16.5px));*/
+
+    flex-wrap: wrap;
     grid-gap: 22px;
-    flex: 0 1 25%;
+    flex: 0 0 22%;
     margin-top: 80px;
+    position: center;
     border-left: 1px solid rgb(168, 206, 204) ;
     border-top: 1px solid rgb(168, 206, 204);
     border-right: 1px solid rgb(168, 206, 204);
@@ -259,8 +268,11 @@ body {
 }
 
 /* ---------------- Lab Tests ----------------------- */
+.lab-tests__container{
+    padding-top: 80px;
+}
 .lab-tests__body {
-    display: flex;  
+    display: flex;
 }
 .lab-tests__cont-one {
     flex: 0 1 25%;
@@ -457,10 +469,7 @@ body {
     font-weight: 4000;
     font-family: 'Open-Sans', sans-serif;
     color: #111111;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 10px;
 }
 
 /*------------------------------- SYSTEM --------------------------------*/
@@ -562,11 +571,12 @@ body {
     margin: 35px auto 0px auto;
 }
 .our__con-title {
-    font-size: 48px;
+    font-size: 36px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 750;
     line-height: 1.1;
     margin: 20px 0 0;
+    object-fit: scale-down;
 }
 .our__con-text {
     margin: 20px 0 0;
@@ -575,6 +585,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.6;
+    object-fit: scale-down;
 }
 .our__picture-two {
     flex: 0 0 33.33333333%;
@@ -592,16 +603,19 @@ body {
 .page__diagrams {
     color: #ffffff;
     background-color: #536766;
+    pointer-events: initial;
 }
 .diagrams__cont {
-    grid-gap: 10px;
+    grid-gap: 24px;
     display: flex;
+    flex-wrap: wrap;
 }
 .diagrams__cont-page {
-    min-height: 291px;
+    min-height: 200px;
     margin-bottom: 50px;
     text-align: center;
-    flex: 0 0 25%;
+    align-content: center;
+    flex:  0 0 23%;
 }
 .diagrams__icon {
     margin: 20px auto 0;
@@ -680,6 +694,7 @@ h2 {
 }
 /*------------------------------- PAGE CONTACTS -------------------------*/
 .page__contacts {
+    background-color: #a8cecc;
     color: #ffffff;
     text-align: left;
 }
@@ -746,8 +761,11 @@ h2 {
         font-size: 20px;
         margin: 20px 1px 0;
     }
+
     .diagrams__cont-page {
-        margin-top: 80px;
+        margin-top: 40px;
+        /*grid-auto-columns: calc(50% - 5px);*/
+        /*grid-template-columns: repeat(2, calc(50%));*/
     }
     .system__cont-two {
         display: flex;
@@ -771,11 +789,12 @@ h2 {
         font-size: 18px;
         margin: 20px 1px 0px 1px;
     }
+
     .lab-tests__body {
         display: block;
     }
     .diagrams__cont-page {
-        margin: 80px -10px 80px -10px;
+        margin: 80px 10px 80px 10px;
     }
     .system__cont-two-body {
         display: grid;
@@ -798,6 +817,7 @@ h2 {
     .nav__link {
         font-size: 18px;
     }
+
 }
 @media (max-width: 767px) {
     .header__menu {
@@ -809,6 +829,8 @@ h2 {
         display: flex;
         flex-direction: column;
     }
+
+
 }
 @media (max-width: 425px){
     .main-block {
@@ -839,14 +861,25 @@ h2 {
     .button{
         letter-spacing: 3px;
     }
+
+
+}
+@media(max-width: 900px) {
+    .services__container {
+        overflow: auto;
+    }
+
 }
 @media(max-width: 960px){
+
     .lab-tests__body {
         margin: 180px 0px 60px 0px;  
     }
+
 }
 @media(min-width: 961px){
     .lab-tests__body {
         margin: 80px 0px 60px 0px;  
     }
+
 }
